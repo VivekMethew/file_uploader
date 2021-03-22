@@ -1,0 +1,72 @@
+
+GET http://localhost:5000/users
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTQ4MzIxMDcsImV4cCI6MTYxNDgzMjYwNywiYXVkIjoiNjAzMDM3Nzg0NTVlNWEyNjQ4OGE3NTA5IiwiaXNzIjoiZGVtby5jb20ifQ.dzzHJiOWid4jAwFSOzFgIGwqrE5YzXV7e9xVhECQmUo
+
+###
+GET http://localhost:5000/users/6324b33816227731184cd8a
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTM3NzM5MDQsImV4cCI6MTYxMzc3NDQwNCwiYXVkIjoiNjAzMDM3Nzg0NTVlNWEyNjQ4OGE3NTA5IiwiaXNzIjoiZGVtby5jb20ifQ.YR1YiAusMG2tZ5NHK0OM95X95KnGkwy5qVqOWZafO0w
+
+
+### craete a user
+POST  http://localhost:5000/users
+content-type: application/json
+
+{
+    "fname": "vivek",
+    "lname": "kumar",
+    "email": "vivekmethew@gmail.com",
+    "password": "454554",
+    "phone":"9718546885"
+}
+
+### login user
+POST  http://localhost:5000/users/login
+content-type: application/json
+
+{
+    "email": "vivekmethew8@gmail.com",
+    "password": "123456"
+}
+
+### update user
+POST  http://localhost:5000/users/refresh-token
+content-type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTM3NzY3OTIsImV4cCI6MTY0NTMzNDM5MiwiYXVkIjoiNjAzMDM3Nzg0NTVlNWEyNjQ4OGE3NTA5IiwiaXNzIjoiZGVtby5jb20ifQ.ud2t5L21S1cjq1dVkPHIwxAa6Wuk5K7akJj95J3nLZM"
+}
+
+### update user
+DELETE http://localhost:5000/logout
+content-type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTM3NzY3OTIsImV4cCI6MTY0NTMzNDM5MiwiYXVkIjoiNjAzMDM3Nzg0NTVlNWEyNjQ4OGE3NTA5IiwiaXNzIjoiZGVtby5jb20ifQ.ud2t5L21S1cjq1dVkPHIwxAa6Wuk5K7akJj95J3nLZM"
+}
+
+### update user
+PATCH  http://localhost:5000/users/601587c518d19c262cd28812
+content-type: application/json
+
+{
+    "fname":"dummy",
+    "lname":"users",
+    "email":"dummy.users@tech.com",
+    "phone":"xxxxxxxxxx"
+}
+
+### delete user
+DELETE http://localhost:5000/users/60157097c15f452a7c584a19
+content-type: application/json
+
+
+
+
+
+
+
+
+
+
